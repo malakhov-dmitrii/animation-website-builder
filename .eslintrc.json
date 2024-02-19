@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "env": {
+      "browser": true,
+      "es2021": true
+  },
+  "extends": [
+	    "eslint:recommended",
+	    "plugin:@typescript-eslint/eslint-recommended",
+	    "plugin:@typescript-eslint/recommended",
+	    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "plugin:react/jsx-runtime",
+      "plugin:react-hooks/recommended",
+      "plugin:import/recommended"
+      // "stylelint",
+      // "stylelint/jest"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": [
+      "@typescript-eslint"
+  ],
+  "settings": {
+    "import/resolver": {
+        "alias": {
+            "map": [
+                ["@src", "./src"]
+            ],
+            "extensions": [".ts", ".tsx"]
+        }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": [
+      2,
+      {
+          "allowString" : false,
+          "allowNumber" : false
+      }
+  ],
+  "no-console": "off",
+  
+  "linebreak-style": ["error", "unix"],
+  "quotes": ["error", "single"],
+  "semi": ["error", "never"],
+  "indent": ["error", 4, { "SwitchCase": 1 }],
+  "no-trailing-spaces": "error",
+  "brace-style": ["error", "1tbs"],
+  "keyword-spacing": "error",
+  "no-multi-spaces": "error",
+  "no-multiple-empty-lines": "error",
+  "comma-dangle": ["error", {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "never",
+          "exports": "never",
+          "functions": "never"
+      }],
+  "sort-imports": ["error", {
+          "ignoreCase": false,
+          "ignoreDeclarationSort": true,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+          "allowSeparatedGroups": true
+      }]
+  },
+  "ignorePatterns": ["src/**/*.test.*", "**/*.scss"],
+  "overrides": [
+    {
+      "files": ["vite.config.js", "server/server.js"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": null
+      }
+    }
+  ]
+}
