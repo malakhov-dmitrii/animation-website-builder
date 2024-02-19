@@ -1,0 +1,28 @@
+$mainColor: #FFCBE1;
+$secondColor: #F9F9F9;
+$cardBorderColor: #CBCBCB;
+$white: #fff;
+$colorTextDark: #222;
+$buttonColorDarkRose: #F94590;
+$buttonColorRose: #FCCCDA;
+$buttonHovered: #E0E0E0;
+$quantityColor: #4AFF52;
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+$container-max-widths: (
+  xs: 358px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1500px,
+);
+$z-index-bg: 2;
+$z-index-media: 5;
+$z-index-content: 10;
+$z-index-hight-content: 50;
+$z-index-popup: 100;

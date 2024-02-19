@@ -1,0 +1,14 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.layout {
+  @include reset;
+
+  &__title {
+    @include reset;
+    @include text;
+    @include text-format(43px, 700, 52px);
+
+    color: $colorTextDark;
+  }
+}

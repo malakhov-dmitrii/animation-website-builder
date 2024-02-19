@@ -1,0 +1,13 @@
+@import "normalize.css";
+@import "./fonts/Inter/inter.css";
+
+
+body {
+  margin: 0 auto;
+  font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  background-color: #fff;
+  color: #fff;
+  position: relative;
+  max-width: 1600px;
+}
+

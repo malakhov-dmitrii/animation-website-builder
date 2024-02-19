@@ -1,0 +1,12 @@
+@import '../utils/mixins';
+@import "../utils/variables";
+
+.page {
+  @include reset;
+
+  height: 100vh;
+
+  &__container {
+    height: 100%;
+  }
+}
