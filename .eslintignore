@@ -8,3 +8,4 @@ jest.config.ts
 *.css
 *.svg
 *.scss.d.ts
+reportWebVitals.ts
