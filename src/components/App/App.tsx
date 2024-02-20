@@ -2,11 +2,13 @@ import Layout from '../Layout/Layout'
 
 function App() {
     return (
-        <div className='page'>
-            <div className='page__container'>
-                <Layout />
+        <main className='main'>
+            <div className='page'>
+                <div className='page__container'>
+                    <Layout />
+                </div>
             </div>
-        </div>
+        </main>
     )
 }
 

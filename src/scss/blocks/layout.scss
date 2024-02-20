@@ -7,8 +7,36 @@
   &__title {
     @include reset;
     @include text;
-    @include text-format(43px, 700, 52px);
+    @include text-format(43px, 700, 0.83);
+
+    letter-spacing: -2px;
+    color: $colorTextDark;
+  }
+
+  &__description {
+    @include reset;
+    @include text;
+    @include text-format(15px, 400, 1.46);
 
     color: $colorTextDark;
+  }
+
+  &__button {
+    @include reset;
+    @include text;
+    @include text-format(17px, 500, 0.83);
+
+    width: 136px;
+    height: 41px;
+    background-color: $buttonColor;
+    color: $buttonTextColor;
+    border: none;
+  }
+
+  &__img {
+    @include reset;
+
+    width: 300px;
+    height: 300px;
   }
 }
