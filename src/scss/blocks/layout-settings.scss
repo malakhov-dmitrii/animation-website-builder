@@ -1,0 +1,7 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.layout-settings {
+  @include reset;
+  
+}
