@@ -1,14 +1,16 @@
+import Header from '../Header/Header'
 import Layout from '../Layout/Layout'
 
 function App() {
     return (
-        <main className='main'>
-            <div className='page'>
-                <div className='page__container'>
+        <div className='page'>
+            <div className='page__container'>
+                <Header />
+                <main className='main'>
                     <Layout />
-                </div>
+                </main>
             </div>
-        </main>
+        </div>
     )
 }
 
