@@ -59,30 +59,40 @@ function Slider({ sliderName, fromCenter }: TSliderProps) {
                 />
                 <div className='slider__track'></div>
                 {fromCenter ? (
-                    <div
-                        className='slider__track-progress'
-                        style={{
-                            width: `${value > 0 ? value / 2.5 : (value / 2.5) * -1}%`,
-                            transformOrigin: `${value < 0 ? 'left center' : 'none'}`,
-                            transform: `${value < 0 ? 'rotate(180deg)' : 'none'}`,
-                        }}
-                    />
+                    <>
+                        <div
+                            className='slider__track-progress'
+                            style={{
+                                width: `${value > 0 ? value / 2.5 : (value / 2.5) * -1}%`,
+                                transformOrigin: `${value < 0 ? 'left center' : 'none'}`,
+                                transform: `${value < 0 ? 'rotate(180deg)' : 'none'}`,
+                            }}
+                        />
+                        <div
+                            className='slider__thumb'
+                            style={{
+                                left: `${((value + 100) / 220) * 100}%`,
+                            }}
+                        />
+                    </>
                 ) : (
-                    <div
-                        className='slider__track-progress slider__track-progress_type_left'
-                        style={{
-                            width: `${
-                                (Math.max(0, value - minValue) / (maxValue - minValue)) * 100
-                            }%`,
-                        }}
-                    />
+                    <>
+                        <div
+                            className='slider__track-progress slider__track-progress_type_left'
+                            style={{
+                                width: `${
+                                    (Math.max(0, value - minValue) / (maxValue - minValue)) * 100
+                                }%`,
+                            }}
+                        />
+                        <div
+                            className='slider__thumb'
+                            style={{
+                                left: `${((value + 100) / 220) * 100}%`,
+                            }}
+                        />
+                    </>
                 )}
-                <div
-                    className='slider__thumb'
-                    style={{
-                        left: `${((value + 100) / 220) * 100}%`,
-                    }}
-                />
             </div>
             <output className='slider__output'>{renderValue(value, sliderName)}</output>
         </div>

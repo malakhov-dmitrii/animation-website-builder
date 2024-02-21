@@ -5,8 +5,13 @@ $colorTextDark: #222;
 $colorTextSlider: #444;
 $buttonColor: #70B2FF;
 $buttonTextColor: #FFF;
+//slider
 $sliderTrackColor: #E0E0E0;
 $sliderProgressTrackColor: #AFAFAF;
+//checkbox
+$checkboxMainColor: $sliderProgressTrackColor;
+$checkBoxSliderColor: #FFF;
+$checkBoxSliderColorActive: #2BE080;
 $breakpoints: (
   xs: 0,
   sm: 576px,

@@ -1,0 +1,67 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.checkbox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 170px;
+  justify-content: center;
+
+  &__container {
+    padding-top: 5px;
+  }
+
+  &__name {
+    @include reset;
+    @include text;
+    @include text-format(13px, 700, 0.83);
+
+    color: $colorTextSlider;
+    justify-self: end;
+    padding-right: 10px;
+    padding-top: 8px;
+  }
+}
+
+.switch input {
+  display: none;
+}
+
+.switch {
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  margin: 0;
+  position: relative;
+}
+
+.checkbox-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px $checkboxMainColor, 0 0 4px $checkboxMainColor;
+  background-color: $checkboxMainColor;
+  cursor: pointer;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.checkbox-slider:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $checkBoxSliderColor;
+  border-radius: 6px;
+  transform: translateX(-8px);
+  transition: 0.2s;
+}
+
+input:checked + .checkbox-slider:before {
+  transform: translateX(8px);
+  background-color: $checkBoxSliderColorActive;
+}
