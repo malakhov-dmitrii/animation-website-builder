@@ -37,8 +37,7 @@
     "stylelint": "stylelint '**/*{.css,.scss}'",
     "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
     "lint-fix": "npx eslint --fix \"**/*.{ts,tsx}\"",
-    "lint-staged-fix": "npx lint-staged",
-    "prepare": "husky"
+    "lint-staged-fix": "npx lint-staged"
   },
   "eslintConfig": {
     "extends": [

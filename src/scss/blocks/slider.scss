@@ -1,0 +1,95 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.slider {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 120px 50px;
+  justify-content: center;
+  align-items: center;
+
+  &__conatiner {
+    width: 118px;
+    position: relative;
+    justify-self: center;
+  }
+
+  &__input {
+    @include reset;
+
+    width: 100%;
+    height: 3px;
+    appearance: none;
+    background-color: #ddd;
+    outline: none;
+    border-radius: 6px;
+    z-index: 30;
+    position: relative;
+    opacity: 0;
+  }
+
+  &__track {
+    height: 2px;
+    width: 100%;
+    background-color: $sliderTrackColor;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    z-index: 10;
+    border-radius: 6px;
+  }
+
+  &__track-progress {
+    height: 2px;
+    background-color: $sliderProgressTrackColor;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    z-index: 10;
+    border-radius: 6px;
+  }
+
+  &__thumb {
+    width: 12px;
+    height: 12px;
+    background-color: $sliderProgressTrackColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  &__thumb::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  &__name {
+    @include reset;
+    @include text;
+    @include text-format(13px, 700, 0.83);
+
+    color: $colorTextSlider;
+    justify-self: end;
+    padding-right: 10px;
+    padding-top: 8px;
+  }
+
+  &__output {
+    @include reset;
+    @include text;
+    @include text-format(13px, 400, 0.83);
+
+    color: $colorTextSlider;
+    padding-left: 10px;
+    padding-top: 8px;
+  }
+}

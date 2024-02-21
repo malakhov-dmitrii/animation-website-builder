@@ -3,5 +3,11 @@
 
 .layout-settings {
   @include reset;
-  
+
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
 }

@@ -1,7 +1,15 @@
+import Slider from '../Slider/Slider'
+
 function LayoutSettings() {
     return (
         <section className='layout-settings'>
-            <h2 className='layout__title'>Settings</h2>
+            <Slider sliderName={'X'} />
+            <Slider sliderName={'Y'} />
+            <Slider sliderName={'Opacity'} />
+            <Slider sliderName={'Scale'} />
+            <Slider sliderName={'Blur'} />
+            <Slider sliderName={'Speed'} />
+            <Slider sliderName={'Delay'} />
         </section>
     )
 }
