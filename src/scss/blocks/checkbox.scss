@@ -37,10 +37,7 @@
 
 .checkbox-slider {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   border-radius: 20px;
   box-shadow: 0 0 0 2px $checkboxMainColor, 0 0 4px $checkboxMainColor;
   background-color: $checkboxMainColor;
@@ -50,7 +47,7 @@
   transition: 0.2s;
 }
 
-.checkbox-slider:before {
+.checkbox-slider::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -61,7 +58,7 @@
   transition: 0.2s;
 }
 
-input:checked + .checkbox-slider:before {
+input:checked + .checkbox-slider::before {
   transform: translateX(8px);
   background-color: $checkBoxSliderColorActive;
 }
