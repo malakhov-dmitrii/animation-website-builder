@@ -3,6 +3,7 @@ import Image from '../../images/Rectangle_53-min.jpg'
 function Layout() {
     return (
         <section className='layout'>
+            <canvas className='layout__page'></canvas>
             <h1 className='layout__title'>Animation Settings</h1>
             <p className='layout__description'>
                 The user should have the option to select any element on the page and set up its

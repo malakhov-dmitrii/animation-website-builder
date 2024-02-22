@@ -18,7 +18,7 @@ const Dropdown = () => {
                 value={selectedValue}
                 onChange={handleChange}
             >
-                <option className='dropdown__option' value='ease'>
+                <option className='dropdown__option' value='Ease'>
                     Ease
                 </option>
                 <option className='dropdown__option' value='linear'>

@@ -14,6 +14,15 @@ $sliderProgressTrackColor: #AFAFAF;
 $checkboxMainColor: $sliderProgressTrackColor;
 $checkBoxSliderColor: #FFF;
 $checkBoxSliderColorActive: #2BE080;
+
+//z-index
+$z-index-bg: 2;
+$z-index-media: 5;
+$z-index-content: 10;
+$z-index-hight-content: 50;
+$z-index-popup: 100;
+
+//media
 $breakpoints: (
   xs: 0,
   sm: 576px,
@@ -28,8 +37,3 @@ $container-max-widths: (
   lg: 960px,
   xl: 1500px,
 );
-$z-index-bg: 2;
-$z-index-media: 5;
-$z-index-content: 10;
-$z-index-hight-content: 50;
-$z-index-popup: 100;

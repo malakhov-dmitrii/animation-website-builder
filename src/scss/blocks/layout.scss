@@ -3,6 +3,19 @@
 
 .layout {
   @include reset;
+  
+  position: relative;
+  background-color: $backgroundColor;
+
+  &__page {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    width: 874px;
+    height: 498px;
+    background-color: $mainColor;
+    z-index: $z-index-bg;
+  }
 
   &__title {
     @include reset;
