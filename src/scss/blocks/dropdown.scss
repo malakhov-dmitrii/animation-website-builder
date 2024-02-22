@@ -1,0 +1,50 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.dropdown {
+  @include reset;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 120px 50px;
+  justify-content: center;
+
+  &__name {
+    @include reset;
+    @include text;
+    @include text-format(13px, 700, 0.83);
+
+    color: $colorTextSlider;
+    justify-self: end;
+    padding-right: 10px;
+    padding-top: 8px;
+  }
+
+  &__select {
+    @include reset;
+    
+    max-width: 100%;
+    align-self: center;
+    margin-top: 6px;
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path stroke="grey" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 9l-7 7-7-7"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 1.5em;
+  }
+
+  &__option {
+    @include reset;
+    @include text;
+    @include text-format(12px, 400, 0.83);
+
+    color: $colorTextSlider;
+    justify-self: end;
+    padding-right: 10px;
+    padding-top: 8px;
+  }
+}

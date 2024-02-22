@@ -1,4 +1,5 @@
 import Checkbox from '../Checkbox/Checkbox'
+import Dropdown from '../Dropdown/Dropdown'
 import Slider from '../Slider/Slider'
 
 function LayoutSettings() {
@@ -11,6 +12,7 @@ function LayoutSettings() {
             <Slider sliderName={'Blur'} fromCenter={false} />
             <Slider sliderName={'Speed'} fromCenter={false} />
             <Slider sliderName={'Delay'} fromCenter={false} />
+            <Dropdown />
             <Checkbox />
         </section>
     )
