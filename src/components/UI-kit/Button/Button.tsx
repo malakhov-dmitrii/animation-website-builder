@@ -1,5 +1,5 @@
 function Button() {
-    return <button className='layout__button'>Button</button>
+    return <button className='ui-button'>Button</button>
 }
 
 export default Button

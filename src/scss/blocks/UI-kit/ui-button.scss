@@ -1,0 +1,15 @@
+@import '../../utils/mixins';
+@import '../../utils/variables';
+
+.ui-button {
+    @include reset;
+    @include text;
+    @include text-format(17px, 500, 0.83);
+
+    position: relative;
+    width: 136px;
+    height: 41px;
+    background-color: $buttonColor;
+    color: $buttonTextColor;
+    border: none;
+}

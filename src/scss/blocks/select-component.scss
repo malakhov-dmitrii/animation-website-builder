@@ -1,0 +1,56 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.select-component {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+  &__left_type_active {
+    border: 1px solid $buutonBorderColor;
+  }
+
+  &__left_type_active::after,
+  &__left_type_active::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    border: 1px solid $buutonBorderColor;
+    background-color: #fff;
+    z-index: $z-index-hight-content;
+  }
+
+  &__left_type_active::after {
+    top: -4px;
+    right: -4px;
+  }
+
+  &__left_type_active::before {
+    top: -4px;
+    left: -4px;
+  }
+
+  &__right_type_active::after,
+  &__right_type_active::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    border: 1px solid $buutonBorderColor;
+    background-color: #fff;
+    z-index: $z-index-hight-content;
+  }
+
+  &__right_type_active::after {
+    bottom: -4px;
+    right: -4px;
+  }
+
+  &__right_type_active::before {
+    bottom: -4px;
+    left: -4px;
+  }
+}
