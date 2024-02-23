@@ -1,0 +1,8 @@
+@import '../../utils/mixins';
+
+.ui-image {
+  @include reset;
+
+  width: 300px;
+  height: 300px;
+}

@@ -1,6 +1,6 @@
-import Image from '../../images/Rectangle_53-min.jpg'
 import SelectComponent from '../SelectComponent/SelectComponent'
 import Button from '../UI-kit/Button/Button'
+import Image from '../UI-kit/Image/Image'
 
 function Layout() {
     return (
@@ -17,12 +17,9 @@ function Layout() {
                 <SelectComponent>
                     <Button />
                 </SelectComponent>
-
-                <img
-                    className='layout__img'
-                    src={Image}
-                    alt='Изображение. Монитор с интерфейсом программы по работе с изображениями'
-                />
+                <SelectComponent>
+                    <Image />
+                </SelectComponent>
             </div>
         </section>
     )

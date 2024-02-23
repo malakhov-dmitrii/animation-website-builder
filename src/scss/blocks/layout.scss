@@ -37,11 +37,4 @@
 
     color: $colorTextDark;
   }
-
-  &__img {
-    @include reset;
-
-    width: 300px;
-    height: 300px;
-  }
 }
