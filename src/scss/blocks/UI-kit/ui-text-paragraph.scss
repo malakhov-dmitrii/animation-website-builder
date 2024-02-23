@@ -1,0 +1,10 @@
+@import '../../utils/mixins';
+@import '../../utils/variables';
+
+.ui-text-paragraph {
+  @include reset;
+  @include text;
+  @include text-format(15px, 400, 1.46);
+
+  color: $colorTextDark;
+}
