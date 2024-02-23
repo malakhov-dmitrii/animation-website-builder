@@ -44,7 +44,7 @@
   cursor: pointer;
   border: 1px solid transparent;
   overflow: hidden;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .checkbox-slider::before {
@@ -55,7 +55,7 @@
   background-color: $checkBoxSliderColor;
   border-radius: 6px;
   transform: translateX(-8px);
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 input:checked + .checkbox-slider::before {
