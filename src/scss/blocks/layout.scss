@@ -4,13 +4,16 @@
 .layout {
   @include reset;
   
+  min-width: 1000px;
   position: relative;
   background-color: $backgroundColor;
 
   &__page {
     position: absolute;
     top: 30px;
-    left: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 874px;
     height: 498px;
     background-color: $mainColor;
