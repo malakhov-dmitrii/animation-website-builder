@@ -1,12 +1,15 @@
 import SelectComponent from '../SelectComponent/SelectComponent'
 import Button from '../UI-kit/Button/Button'
 import Image from '../UI-kit/Image/Image'
+import TextHeader from '../UI-kit/TextHeader/TextHeader'
 
 function Layout() {
     return (
         <section className='layout'>
             <div className='layout__page'>
-                <h1 className='layout__title'>Animation Settings</h1>
+                <SelectComponent>
+                    <TextHeader />
+                </SelectComponent>
                 <p className='layout__description'>
                     The user should have the option to select any element on the page and set up its
                     animation using the controls in the right panel. A dotted line will show the

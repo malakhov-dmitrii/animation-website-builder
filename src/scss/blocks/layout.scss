@@ -10,11 +10,9 @@
   overflow-y: auto;
 
   &__page {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
+    position: relative;
     margin: 0 auto;
+    margin-top: 30px;
     width: 874px;
     max-height: 498px;
     background-color: $mainColor;
