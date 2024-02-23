@@ -5,6 +5,7 @@
   @include reset;
 
   height: 100vh;
+  overflow-x: auto;
 
   &__container {
     height: 100%;
