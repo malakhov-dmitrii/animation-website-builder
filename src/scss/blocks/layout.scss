@@ -7,6 +7,7 @@
   min-width: 1000px;
   position: relative;
   background-color: $backgroundColor;
+  overflow-y: auto;
 
   &__page {
     position: absolute;
@@ -15,7 +16,7 @@
     right: 0;
     margin: 0 auto;
     width: 874px;
-    height: 498px;
+    max-height: 498px;
     background-color: $mainColor;
     z-index: $z-index-bg;
   }
