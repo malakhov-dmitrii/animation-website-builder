@@ -3,7 +3,7 @@ import SelectComponent from '../../SelectComponent/SelectComponent'
 function TextParagraph() {
     return (
         <SelectComponent style={{ top: '163px', left: '70px' }}>
-            <p className='ui-text-paragraph'>
+            <p id='2' className='ui-text-paragraph'>
                 The user should have the option to select any element on the page and set up its
                 animation using the controls in the right panel. A dotted line will show the
                 element's position and state before the animation begins, giving the user a clear

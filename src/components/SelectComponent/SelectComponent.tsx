@@ -1,7 +1,7 @@
-import { ReactNode, useState } from 'react'
+import { ReactElement, useState } from 'react'
 
 type TSelectComponentProps = {
-    children: ReactNode
+    children: ReactElement<{ id: string }>
     style: { [key: string]: string }
 }
 
@@ -10,10 +10,16 @@ function SelectComponent({ children, style }: TSelectComponentProps) {
 
     const handleActiveClick = () => {
         setIsActive(!isActive)
+        console.log('🚀 ~ SelectComponent ~ children:', children.props.id)
     }
 
     return (
-        <div className='select-component' style={style} onClick={handleActiveClick}>
+        <div
+            id={`${children?.props.id}-userId`}
+            className='select-component'
+            style={style}
+            onClick={handleActiveClick}
+        >
             <div
                 className={`select-component__container ${
                     isActive
