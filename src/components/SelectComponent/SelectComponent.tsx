@@ -10,7 +10,6 @@ function SelectComponent({ children, style }: TSelectComponentProps) {
 
     const handleActiveClick = () => {
         setIsActive(!isActive)
-        console.log('🚀 ~ SelectComponent ~ children:', children.props.id)
     }
 
     return (
