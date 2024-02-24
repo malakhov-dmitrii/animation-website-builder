@@ -2,11 +2,15 @@
 @import '../utils/variables';
 
 .select-component {
-  position: relative;
-  display: flex;
-  width: fit-content;
-  height: fit-content;
+  position: absolute;
 
+  &__container {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+  }
+  
   &__left_type_active {
     border: 1px solid $buutonBorderColor;
   }

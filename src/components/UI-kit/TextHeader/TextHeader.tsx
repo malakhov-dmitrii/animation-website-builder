@@ -1,5 +1,11 @@
+import SelectComponent from '../../SelectComponent/SelectComponent'
+
 function TextHeader() {
-    return <h1 className='ui-text-header'>Animation Settings</h1>
+    return (
+        <SelectComponent style={{ top: '91px', left: '70px' }}>
+            <h1 className='ui-text-header'>Animation Settings</h1>
+        </SelectComponent>
+    )
 }
 
 export default TextHeader

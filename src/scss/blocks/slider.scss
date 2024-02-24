@@ -55,24 +55,14 @@
   &__thumb {
     width: 12px;
     height: 12px;
-    background-color: $sliderProgressTrackColor;
+    background-color: #fff;
+    border: 2px solid $sliderProgressTrackColor;
+    box-sizing: border-box;
     border-radius: 50%;
     position: absolute;
     top: 7px;
     cursor: pointer;
     z-index: 20;
-  }
-
-  &__thumb::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background-color: white;
-    border-radius: 50%;
   }
 
   &__name {

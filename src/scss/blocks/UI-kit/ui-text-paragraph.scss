@@ -6,5 +6,7 @@
   @include text;
   @include text-format(15px, 400, 1.46);
 
+  width: 374px;
+  height: 160px;
   color: $colorTextDark;
 }
