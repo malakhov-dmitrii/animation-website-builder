@@ -1,17 +1,17 @@
-import { useDispatch } from '../../hooks/hooks'
+import { useDispatch, useSelector } from '../../hooks/hooks'
 import { updateSettings } from '../../services/settingsSlice'
 
 type TSliderProps = {
     sliderName: string
     fromCenter: boolean
     value: number
-    id: string
 }
 
-function Slider({ sliderName, fromCenter, value, id }: TSliderProps) {
+function Slider({ sliderName, fromCenter, value }: TSliderProps) {
     const minValue = -100
     const maxValue = 100
     const dispatch = useDispatch()
+    const id = useSelector(store => store.selectedComponent.cId)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = parseInt(e.target.value)
