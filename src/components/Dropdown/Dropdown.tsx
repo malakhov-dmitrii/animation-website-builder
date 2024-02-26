@@ -1,15 +1,16 @@
 import { useState } from 'react'
-import { useDispatch } from '../../hooks/hooks'
-import { updateEasing } from '../../services/actions/settingsActions'
+import { useDispatch, useSelector } from '../../hooks/hooks'
+import { updateEasing } from '../../services/settingsSlice'
 
 const Dropdown = () => {
     const [selectedValue, setSelectedValue] = useState('')
     const dispatch = useDispatch()
+    const id = useSelector(store => store.selectedComponent.cId)
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const newValue = e.target.value
         setSelectedValue(newValue)
-        dispatch(updateEasing(newValue))
+        dispatch(updateEasing({ id, newValue }))
     }
 
     return (

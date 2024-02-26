@@ -1,5 +1,5 @@
-import { useDispatch } from '../../hooks/hooks'
-import { toggleReplay } from '../../services/actions/settingsActions'
+import { useDispatch, useSelector } from '../../hooks/hooks'
+import { toggleReplay } from '../../services/settingsSlice'
 
 type TCheckboxProps = {
     checked: boolean
@@ -7,10 +7,11 @@ type TCheckboxProps = {
 
 function Checkbox({ checked }: TCheckboxProps) {
     const dispatch = useDispatch()
+    const id = useSelector(store => store.selectedComponent.cId)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const isChecked = e.target.checked
-        dispatch(toggleReplay(isChecked))
+        dispatch(toggleReplay({ id, isChecked }))
     }
 
     return (

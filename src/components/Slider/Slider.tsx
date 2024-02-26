@@ -1,20 +1,21 @@
 import { useDispatch } from '../../hooks/hooks'
-import { updateSettings } from '../../services/actions/settingsActions'
+import { updateSettings } from '../../services/settingsSlice'
 
 type TSliderProps = {
     sliderName: string
     fromCenter: boolean
     value: number
+    id: string
 }
 
-function Slider({ sliderName, fromCenter, value }: TSliderProps) {
+function Slider({ sliderName, fromCenter, value, id }: TSliderProps) {
     const minValue = -100
     const maxValue = 100
     const dispatch = useDispatch()
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = parseInt(e.target.value)
-        dispatch(updateSettings({ [sliderName.toLowerCase()]: newValue }))
+        dispatch(updateSettings({ id, settings: { [sliderName.toLowerCase()]: newValue } }))
     }
 
     const roundValue = (
