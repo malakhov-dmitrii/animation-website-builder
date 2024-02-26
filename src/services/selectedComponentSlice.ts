@@ -11,7 +11,7 @@ const initialState: ISelectedComponentState = {
 }
 
 const selectedComponentSlice = createSlice({
-    name: 'settings',
+    name: 'selectedComponent',
     initialState,
     reducers: {
         updateCurrentComponentId: (state, action: TUpdateSelectedComponentAction) => {

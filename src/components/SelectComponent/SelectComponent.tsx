@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from '../../hooks/hooks'
-import { updateCurrentComponentId } from '../../services/actions/settingsActions'
+import { updateCurrentComponentId } from '../../services/actions/selectedComponent'
 
 type TSelectComponentProps = {
     children: ReactElement<{ id: string }>
@@ -21,7 +21,7 @@ function SelectComponent({ children, style }: TSelectComponentProps) {
     useEffect(() => {
         if (id === cId) return setIsActive(true)
         return setIsActive(false)
-    })
+    }, [cId])
 
     return (
         <div id={id} className='select-component' style={style} onClick={handleActiveClick}>

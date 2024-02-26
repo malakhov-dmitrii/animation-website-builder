@@ -1,3 +1,4 @@
 import { createAction } from '@reduxjs/toolkit'
+import { IUpdateSettingsAction } from '../settingsSlice'
 
-export const updateCurrentComponentId = createAction<string>('settings/updateCurrentComponentId')
+export const updateSettings = createAction<IUpdateSettingsAction>('settings/updateSettings')

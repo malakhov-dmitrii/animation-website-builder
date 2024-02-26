@@ -14,7 +14,7 @@ export interface ISettingsState {
     }
 }
 
-interface IUpdateSettingsAction {
+export interface IUpdateSettingsAction {
     x?: number
     y?: number
     opacity?: number
@@ -30,11 +30,11 @@ const initialState: ISettingsState = {
     settings: {
         x: 0,
         y: 0,
-        opacity: 0,
+        opacity: -100,
         scale: 0,
-        blur: 0,
-        speed: 0,
-        delay: 0,
+        blur: -100,
+        speed: -100,
+        delay: -100,
         easing: '',
         replay: false,
     },

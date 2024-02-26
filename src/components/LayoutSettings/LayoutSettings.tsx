@@ -4,19 +4,19 @@ import Slider from '../Slider/Slider'
 import { useSelector } from '../../hooks/hooks'
 
 function LayoutSettings() {
-    const settings = useSelector(store => store.settings)
+    const settings = useSelector(store => store.settings.settings)
 
     return (
         <section className='layout-settings'>
-            <Slider sliderName={'X'} fromCenter={true} settings={settings} />
-            <Slider sliderName={'Y'} fromCenter={true} settings={settings} />
-            <Slider sliderName={'Opacity'} fromCenter={false} settings={settings} />
-            <Slider sliderName={'Scale'} fromCenter={true} settings={settings} />
-            <Slider sliderName={'Blur'} fromCenter={false} settings={settings} />
-            <Slider sliderName={'Speed'} fromCenter={false} settings={settings} />
-            <Slider sliderName={'Delay'} fromCenter={false} settings={settings} />
+            <Slider sliderName={'X'} fromCenter={true} value={settings.x} />
+            <Slider sliderName={'Y'} fromCenter={true} value={settings.y} />
+            <Slider sliderName={'Opacity'} fromCenter={false} value={settings.opacity} />
+            <Slider sliderName={'Scale'} fromCenter={true} value={settings.scale} />
+            <Slider sliderName={'Blur'} fromCenter={false} value={settings.blur} />
+            <Slider sliderName={'Speed'} fromCenter={false} value={settings.speed} />
+            <Slider sliderName={'Delay'} fromCenter={false} value={settings.delay} />
             <Dropdown />
-            <Checkbox />
+            <Checkbox checked={settings.replay} />
         </section>
     )
 }
