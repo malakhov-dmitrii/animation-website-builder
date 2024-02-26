@@ -47,6 +47,9 @@ const settingsSlice = createSlice({
         updateSettings: (state, action: PayloadAction<IUpdateSettingsAction>) => {
             state.settings = { ...state.settings, ...action.payload }
         },
+        toggleReplay: (state, action: PayloadAction<boolean>) => {
+            state.settings.replay = action.payload
+        },
     },
 })
 
