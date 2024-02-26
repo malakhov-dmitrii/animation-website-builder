@@ -1,10 +1,15 @@
 import { useState } from 'react'
+import { useDispatch } from '../../hooks/hooks'
+import { updateEasing } from '../../services/actions/settingsActions'
 
 const Dropdown = () => {
     const [selectedValue, setSelectedValue] = useState('')
+    const dispatch = useDispatch()
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedValue(e.target.value)
+        const newValue = e.target.value
+        setSelectedValue(newValue)
+        dispatch(updateEasing(newValue))
     }
 
     return (
@@ -18,7 +23,7 @@ const Dropdown = () => {
                 value={selectedValue}
                 onChange={handleChange}
             >
-                <option className='dropdown__option' value='Ease'>
+                <option className='dropdown__option' value='ease'>
                     Ease
                 </option>
                 <option className='dropdown__option' value='linear'>
