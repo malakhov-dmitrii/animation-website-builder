@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-interface ISettingsState {
+export interface ISettingsState {
     settings: {
         x: number
         y: number

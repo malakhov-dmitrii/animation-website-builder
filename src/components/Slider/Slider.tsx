@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import { ISettingsState } from '../../services/settingsSlice'
 
 type TSliderProps = {
     sliderName: string
     fromCenter: boolean
+    settings: ISettingsState
 }
 
-function Slider({ sliderName, fromCenter }: TSliderProps) {
+function Slider({ sliderName, fromCenter, settings }: TSliderProps) {
     const minValue = -100
     const maxValue = 100
     const [value, setValue] = useState(fromCenter ? 0 : minValue)
