@@ -1,17 +1,15 @@
-import Picture from '../../../images/Rectangle_53-min.jpg'
-import SelectComponent from '../../SelectComponent/SelectComponent'
+import Picture from "../../../images/Rectangle_53-min.jpg";
+import SelectComponent from "../../SelectComponent/SelectComponent";
 
 function Image() {
-    return (
-        <SelectComponent style={{ top: '73px', left: '504px' }}>
-            <img
-                id='3'
-                className='ui-image'
-                src={Picture}
-                alt='Изображение. Монитор с интерфейсом программы по работе с изображениями'
-            />
-        </SelectComponent>
-    )
+  return (
+    <img
+      id="3"
+      className="ui-image"
+      src={Picture}
+      alt="Изображение. Монитор с интерфейсом программы по работе с изображениями"
+    />
+  );
 }
 
-export default Image
+export default Image;

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./style";
 @import "./blocks/UI-kit/index";
 @import "./blocks/dropdown";
@@ -9,3 +13,19 @@
 @import "./blocks/slider";
 @import "./blocks/checkbox";
 @import "./blocks/select-component";
+
+// body * {
+//   &:hover {
+//     outline: 1px solid red;
+//   }
+// }
+
+.layout {
+  *:hover {
+    outline: 2px solid red; /* Example - adjust color and thickness as needed */
+  }
+
+  * {
+    transition: all 0.2s;
+  }
+}
